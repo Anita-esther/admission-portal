@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Admission Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+<h1>Student Admission Portal</h1>
+<p class="count"><span id="total">0</span> registered</p>
+</header>
+<main>
+<section class="panel">
+<h2>Register a student</h2>
+<form id="form" novalidate>
+<div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="off"><small class="err" id="err-name"></small></div>
+<div class="field"><label for="matric">Matriculation number</label><input id="matric" name="matric" type="text" placeholder="e.g. 2024/12345" autocomplete="off"><small class="err" id="err-matric"></small></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="off"><small class="err" id="err-email"></small></div>
+<div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="08012345678 or +2348012345678" autocomplete="off"><small class="err" id="err-phone"></small></div>
+<div class="field"><label for="age">Age</label><input id="age" name="age" type="number" autocomplete="off"><small class="err" id="err-age"></small></div>
+<div class="field"><label for="department">Department</label>
+<select id="department" name="department">
+<option value="">Select a department</option>
+<option>Computer Science</option>
+<option>Electrical Engineering</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+<option>Medicine and Surgery</option>
+<option>Law</option>
+<option>Accounting</option>
+<option>Business Administration</option>
+<option>Mass Communication</option>
+<option>Microbiology</option>
+</select>
+<small class="err" id="err-department"></small></div>
+<div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="new-password"><small class="err" id="err-password"></small></div>
+<div class="field"><label for="confirm">Confirm password</label><input id="confirm" name="confirm" type="password" autocomplete="new-password"><small class="err" id="err-confirm"></small></div>
+<button type="submit">Register student</button>
+<p id="status" role="status"></p>
+</form>
+</section>
+<section class="panel wide">
+<h2>Registered students</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>#</th><th>Name</th><th>Matric no.</th><th>Email</th><th>Phone</th><th>Age</th><th>Department</th><th>Registered</th><th></th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+<p id="empty" class="empty">No students registered yet. Complete the form to add the first one.</p>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

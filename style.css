@@ -1,0 +1,31 @@
+:root{--ink:#1d2a2f;--muted:#5d6b70;--paper:#eef3f1;--card:#fff;--line:#cfdad6;--brand:#0f5c4d;--brand-dark:#0a4338;--danger:#b3261e;--ok:#0f6b3a}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--brand);color:#fff;padding:1.25rem clamp(1rem,4vw,3rem)}
+.top h1{margin:0;font-size:1.5rem;font-weight:600}
+.count{margin:0;font-size:1rem}
+.count span{font-size:2rem;font-weight:700;margin-right:.35rem;vertical-align:middle}
+main{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:1.5rem;padding:1.5rem clamp(1rem,4vw,3rem);align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.5rem;min-width:0}
+.panel h2{margin:0 0 1rem;font-size:1.15rem}
+.field{display:flex;flex-direction:column;margin-bottom:.9rem}
+label{font-size:.9rem;font-weight:600;margin-bottom:.25rem}
+input,select{font:inherit;padding:.6rem .7rem;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+input:focus,select:focus,button:focus-visible{outline:3px solid #7fc4b3;outline-offset:1px}
+.invalid{border-color:var(--danger)}
+.err{color:var(--danger);font-size:.82rem;min-height:1.1rem;margin-top:.2rem}
+button{font:inherit;cursor:pointer;border:0;border-radius:6px;padding:.7rem 1.1rem;background:var(--brand);color:#fff;font-weight:600;width:100%}
+button:hover{background:var(--brand-dark)}
+#status{margin:.8rem 0 0;font-weight:600;min-height:1.4rem}
+#status.ok{color:var(--ok)}
+#status.bad{color:var(--danger)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:#e3ece9;font-weight:600}
+td.btn{padding:.3rem}
+.remove{width:auto;padding:.35rem .7rem;background:#fff;color:var(--danger);border:1px solid var(--danger);font-size:.8rem}
+.remove:hover{background:var(--danger);color:#fff}
+.empty{color:var(--muted);margin:1rem 0 0}
+@media (max-width:860px){main{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
